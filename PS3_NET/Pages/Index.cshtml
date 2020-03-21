@@ -1,0 +1,64 @@
+﻿@page
+@model IndexModel
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyCompany</title>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validationunobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+    <h2>Witaj w naszej firmie</h2>
+    <form method="post">
+        <label asp-for="person.firstName"> </label>
+        <input asp-for="person.firstName" />
+        <span asp-validation-for="person.firstName" class="text-danger"></span><br /><br />
+
+        <label asp-for="person.Email"></label>
+        <input asp-for="person.Email" />
+        <span asp-validation-for="person.Email" class="text-danger"></span><br /><br />
+
+
+        <label asp-for="person.age"></label>
+        <input asp-for="person.age" />
+        <span asp-validation-for="person.age" class="text-danger"></span><br /><br />
+
+        <div>
+            <label asp-for="person.sex"></label>        
+            <input asp-for="person.sex" type="radio" value="kobieta" />
+            <label>kobieta</label>
+            <input asp-for="person.sex" type="radio" value="mezczyzna" />
+            <label>mezczyzna</label>
+            
+        </div>
+       
+        <label asp-for="person.weight"></label>
+        <input asp-for="person.weight" />
+        <span asp-validation-for="person.weight" class="text-danger"></span><br /><br />
+
+        <label asp-for="person.height"></label>
+        <input asp-for="person.height" />
+        <span asp-validation-for="person.height" class="text-danger"></span><br /><br />
+
+        <select name="choice">
+            <option value="0">centymetry</option>
+            <option value="1">metry</option>
+        </select>
+        <br /><br />
+
+        <button type="submit">Zatwierdź</button>
+    </form>
+
+    <br />
+    <a href="/help">Pomoc</a>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+﻿@page
+@model PS3_NET.Pages.TestModel
+@{
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Welcome</title>
+</head>
+<body>
+    <h2> Witaj, wprowadziles takie dane : </h2>
+    <br />  <br />
+    Imie: @Model.firstName
+    <br />  <br />
+    Email: @Model.Email
+    <br />  <br />
+    Wiek: @Model.age
+    <br />  <br />
+    Pleć: @Model.sex
+    <br />  <br />
+    Waga: @Model.weight
+    <br />  <br />
+    Wzrost: @Model.height
+    <br />  <br />
+    Twoje BMI wynosi:
+    <br />  <br />
+    @Model.BMI
+</body>
+</html>
