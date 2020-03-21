@@ -10,30 +10,30 @@
     <title>Welcome</title>
 </head>
 <body>
-    <h2> Witaj, wprowadziles takie dane : </h2>
-    <br />  <br />
-    Imie: @Model.firstName
-    <br />  <br />
-    Email: @Model.Email
-    <br />  <br />
-    Wiek: @Model.age
-    <br />  <br />
-    Pleć: @Model.sex
-    <br />  <br />
-    Waga: @Model.weight
-    <br />  <br />
-    Wzrost: @Model.height
-    <br />  <br />
-    Twoje BMI wynosi:
-    <br />  <br />
+    <h1> Witaj, wprowadziles takie dane : </h1>
+    
+    <p>Imię: @Model.firstName</p>
+    
+    <p>Email: @Model.Email</p>
+    
+    <p>Wiek: @Model.age</p>
+   
+    <p>Płeć: @Model.sex</p>
+    
+    <p>Waga: @Model.weight</p>
 
-    @if ((ViewBag.BMI = @Model.BMI) < 20 || (ViewBag.BMI = @Model.BMI) > 30)
-    {
-        <p class="text-danger">@Model.BMI</p>
-    }
-    else
-    {
-        <p class="text-success">@Model.BMI</p>
-    }
+    <p>Wzrost: @Model.height m</p>
+
+    <p>Twoje BMI wynosi:</p>
+
+
+        @if ((ViewBag.BMI = @Model.BMI) < 20 || (ViewBag.BMI = @Model.BMI) > 30)
+        {
+            <p class="text-danger">@Model.BMI</p>
+        }
+        else
+        {
+            <p class="text-success">@Model.BMI</p>
+        }
 </body>
 </html>

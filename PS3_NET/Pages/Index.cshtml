@@ -16,49 +16,69 @@
     <script src="~/lib/jquery-validationunobtrusive/jquery.validate.unobtrusive.min.js"></script>
 </head>
 <body>
-    <h2>Witaj w naszej firmie</h2>
+    <h1>Witaj w naszej firmie</h1>
+    <br/><br />
     <form method="post">
-        <label asp-for="person.firstName"> </label>
-        <input asp-for="person.firstName" />
-        <span asp-validation-for="person.firstName" class="text-danger"></span><br /><br />
-
-        <label asp-for="person.Email"></label>
-        <input asp-for="person.Email" />
-        <span asp-validation-for="person.Email" class="text-danger"></span><br /><br />
-
-
-        <label asp-for="person.age"></label>
-        <input asp-for="person.age" />
-        <span asp-validation-for="person.age" class="text-danger"></span><br /><br />
+        <p>
+            <label asp-for="person.firstName"> </label>
+            &emsp;
+            <input asp-for="person.firstName" />
+            <span asp-validation-for="person.firstName" class="text-danger"></span>
+        </p>
+        <p>
+            <label asp-for="person.Email"></label>
+            &emsp;
+            <input asp-for="person.Email" />
+            <span asp-validation-for="person.Email" class="text-danger"></span>
+        </p>
+        <p>
+            <label asp-for="person.age"></label>
+            &emsp;
+            <input asp-for="person.age" />
+            <span asp-validation-for="person.age" class="text-danger"></span>
+        </p>
 
         <div>
-            <label asp-for="person.sex"></label>        
+            <p>
+            <label asp-for="person.sex"></label>
             <input asp-for="person.sex" type="radio" value="kobieta" />
             <label>kobieta</label>
             <input asp-for="person.sex" type="radio" value="mezczyzna" />
             <label>mezczyzna</label>
-            
+            </p>
+
         </div>
-       
-        <label asp-for="person.weight"></label>
-        <input asp-for="person.weight" />
-        <span asp-validation-for="person.weight" class="text-danger"></span><br /><br />
+        <p>
+            <label asp-for="person.weight"></label>
+            &emsp;
+            <input asp-for="person.weight"/>
+            <span asp-validation-for="person.weight" class="text-danger"></span>
+        </p>
+        <p>
+            <label asp-for="person.height"></label>
+            &emsp;
+            <input asp-for="person.height" />
+            <span asp-validation-for="person.height" class="text-danger"></span>
+        </p>
 
-        <label asp-for="person.height"></label>
-        <input asp-for="person.height" />
-        <span asp-validation-for="person.height" class="text-danger"></span><br /><br />
+            <select name="choice" style="background-color: #414141; 
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;">
+                <option value="0">centymetry</option>
+                <option value="1">metry</option>
+            </select>
+            <br /><br />
 
-        <select name="choice">
-            <option value="0">centymetry</option>
-            <option value="1">metry</option>
-        </select>
-        <br /><br />
-
-        <button type="submit">Zatwierdź</button>
+            <button type="submit">Zatwierdź</button>
     </form>
 
     <br />
-    <a href="/help">Pomoc</a>
+    <a href="/help"><p>Pomoc</p></a>
 </body>
 </html>
 

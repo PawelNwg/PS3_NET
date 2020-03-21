@@ -6,40 +6,83 @@
     <title>@ViewData["Title"] - PS3_NET</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+
+    <style>
+        .footer 
+        {
+             position: fixed;
+             left: 0;
+             bottom: 0;
+             width: 100%;
+             background-color: #414141;
+             color: #b1b1b1;
+             text-align: end;
+        }
+        .header
+        {
+            padding: 5px;
+            text-align: center;
+            background: #414141;
+            color: white;
+            font-size: 15px;
+            text-align: start;
+        }
+        button {
+            background-color: #414141;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        p {
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        h1 
+        {   
+            color: white;
+            font-weight: bold;
+            font-size: 32px;
+            text-align: center;
+        }
+        body
+        {
+            background-color: #b1b1b1;
+            color:#ffffff
+        }
+        a:visited 
+        {
+            color:white;
+        }
+        a:link 
+        {
+            color:white;
+        }
+        a:hover
+        {
+            color:white;
+        }
+    </style>
+
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">PS3_NET</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div class="header">
+        &emsp; PS4
+    </div>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - PS3_NET - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
+    <div class="footer ">
+        Paweł Niewęgłowski &emsp;
+    </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
